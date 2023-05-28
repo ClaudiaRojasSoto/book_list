@@ -16,3 +16,18 @@ const loadBooksFromLocalStorage = () => {
 const saveBooksToLocalStorage = () => {
     localStorage.setItem('books', JSON.stringify(books));
   };
+
+
+  const addBook = (event) => {
+   event.preventDefault();
+  const title = titleInput.value;
+  const author = authorInput.value;
+  if (title !== '' && author !== '') {
+    const book = { title, author };
+    books.unshift(book);
+    saveBooksToLocalStorage();
+    displayBooks();
+    titleInput.value = '';
+    authorInput.value = '';
+  }
+};
