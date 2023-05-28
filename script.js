@@ -12,3 +12,7 @@ const loadBooksFromLocalStorage = () => {
     displayBooks();
   }
 };
+
+const saveBooksToLocalStorage = () => {
+    localStorage.setItem('books', JSON.stringify(books));
+  };
