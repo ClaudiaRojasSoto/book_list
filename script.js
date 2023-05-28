@@ -14,8 +14,8 @@ const loadBooksFromLocalStorage = () => {
 };
 
 const saveBooksToLocalStorage = () => {
-    localStorage.setItem('books', JSON.stringify(books));
-  };
+  localStorage.setItem('books', JSON.stringify(books));
+};
 
 
   const addBook = (event) => {
@@ -31,3 +31,14 @@ const saveBooksToLocalStorage = () => {
     authorInput.value = '';
   }
 };
+
+const removeBook = (index) => {
+  books.splice(index, 1);
+  saveBooksToLocalStorage();
+  displayBooks();
+  };
+
+const displayBooks = () => {
+  bookList.innerHTML = '';
+
+}
