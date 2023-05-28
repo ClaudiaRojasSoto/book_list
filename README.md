@@ -21,8 +21,6 @@ OPTIONAL SECTIONS:
 After you're finished please remove all the comments and instructions!
 -->
 
-
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -51,13 +49,12 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 [book_list] <a name="about-project"></a>
 
-**[book_list]** 
+**[book_list]**
 This exercise involves the creation of a book list application that enables users to add and remove books. The application is built using HTML, JavaScript, and leverages the Local Storage feature of web browsers to store the book data persistently. It provides a user-friendly interface with a form where users can input the title and author of a book. Upon submitting the form, the book is added to the list, which is dynamically updated and displayed on the page. The application also allows users to easily remove books from the list with a single click. The use of Local Storage ensures that the book collection remains intact even if the page is refreshed or reopened. This project showcases the implementation of basic CRUD (Create, Read, Update, Delete) operations using web technologies, providing a practical example of data management and persistence within the browser environment.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
 
 <details>
   <summary>HTML</summary>
@@ -86,16 +83,15 @@ This exercise involves the creation of a book list application that enables user
 
 <!-- LIVE DEMO -->
 
-
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
 ### Setup
+
 Clone this repository to your local machine:
 
 git clone git@github.com:ClaudiaRojasSoto/book_list.git
-
 
 ### Prerequisites
 
@@ -132,7 +128,7 @@ Example command:
 
 To run tests, run the following command:
 
-  npm test
+npm test
 
 <!--
 Example command:
@@ -144,8 +140,6 @@ Example command:
 ### Deployment
 
 You can deploy this project using: https://claudiarojassoto.github.io/book_list/
-
-
 
 <!--
 Example:
@@ -159,19 +153,16 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-
 👤 **Claudia Rojas**
 
 - GitHub: [@ClaudiaRojasSoto](https://github.com/ClaudiaRojasSoto)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/claudia-soto-260504208/)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
 
 -**[Classes in JavaScript]**
 
@@ -189,7 +180,6 @@ Feel free to check the [issues page](https://github.com/ClaudiaRojasSoto/book_li
 
 ## ⭐️ Show your support <a name="support"></a>
 
-
 If you like this project, please give it a ⭐️!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -198,16 +188,14 @@ If you like this project, please give it a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-
 I would like to thank...
+
 <p> * Microverse for providing the opportunity to learn Git and GitHub in a collaborative environment.</p>
 <p> * GitHub Docs for providing a wealth of information on Git and GitHub.</p>
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -216,7 +204,6 @@ I would like to thank...
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](https://spdx.org/licenses/MIT.html) licensed.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 Footer
