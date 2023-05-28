@@ -40,5 +40,32 @@ const removeBook = (index) => {
 
 const displayBooks = () => {
   bookList.innerHTML = '';
+  
+  books.forEach((book, index) => {
+    const listItem = document.createElement('li');
+    const titleElement = document.createElement('p');
+    const authorElement = document.createElement('p');
+    const removeButton = document.createElement('button');
+    const lineElement = document.createElement('hr'); 
+  
+    listItem.style.listStyleType = 'none';
+  
+    titleElement.textContent = `Title: ${book.title}`;
+    authorElement.textContent = `Author: ${book.author}`;
+    removeButton.textContent = 'Remove';
+  
+    removeButton.addEventListener('click', () => {
+      removeBook(index);
+    });
+  
+    listItem.appendChild(titleElement);
+    listItem.appendChild(authorElement);
+    listItem.appendChild(removeButton);
+    listItem.appendChild(lineElement); 
+  
+    bookList.appendChild(listItem);
+  });
+};
 
-}
+document.addEventListener('DOMContentLoaded', loadBooksFromLocalStorage);
+addButton.addEventListener('click', addBook);
