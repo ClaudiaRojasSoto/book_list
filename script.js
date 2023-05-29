@@ -59,7 +59,7 @@ function addBook(event) {
     authorInput.value = '';
   }
 }
-
+// Problems with declaration of variables and their use
 function removeBook(index) {
   books.splice(index, 1);
   saveBooksToLocalStorage();

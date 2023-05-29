@@ -20,7 +20,8 @@
         "js": "always",
         "json": "always"
       }
-    ]
+    ],
+    "no-use-before-define": ["error", { "functions": false }]
   },
   "ignorePatterns": ["dist/", "build/"]
 }
