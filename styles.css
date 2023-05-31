@@ -1,87 +1,117 @@
 * {
-  margin: 5px 5px;
-  font-family: 'Lato', sans-serif;
-}
-
-h1,
-h3 {
-  text-align: center;
-  padding-top: 24px;
-  margin-bottom: 24px;
-}
-
-#book-list-container {
-  border: 2px solid black;
-  padding: 10px;
-  display: none;
-}
-
-#book-list-container:empty {
-  display: none;
-}
-
-.list-container {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.list-container li {
+body {
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
-  background-color: #333;
 }
 
-.list-container li:nth-child(odd) {
-  background-color: #fff;
+h1 {
+  text-align: center;
+  margin-right: auto;
 }
 
-.list-container p {
-  margin: 0 0 0 40px;
-}
-
-.list-container button {
-  margin-left: auto;
-  box-shadow: 3px 3px;
-}
-
-.list-container .book-info {
-  flex: 1;
-  margin-right: 10px;
-}
-
-.even {
-  background-color: grey;
-}
-
-.separation-line {
+nav ul {
+  list-style-type: none;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 15%;
-  border: solid 2px black;
-  margin-left: 42.5%;
-  margin-top: 36px;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.content-section h3 {
+  margin-bottom: 10px;
 }
 
 .input-container {
-  margin-left: 35%;
-  margin-right: 35%;
   display: flex;
   flex-direction: column;
 }
 
 .inputs {
   width: 100%;
-  border: solid 2px black;
   padding: 5px;
+  margin-bottom: 10px;
 }
 
 .button {
   display: flex;
   justify-content: flex-end;
+}
+
+.separation-line {
+  width: 15%;
+  border: solid 2px black;
+  margin: 36px auto;
+}
+
+#book-list {
+  margin-top: 10px;
+  border: solid 2px black;
+}
+
+#book-list-container {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.book-item:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.book-item p {
+  margin: 0;
+}
+
+.book-item button {
+  box-shadow: 3px 3px;
+}
+
+#datetime {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 14px;
 }

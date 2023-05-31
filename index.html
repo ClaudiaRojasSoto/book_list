@@ -4,35 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>Book-List</title>
   </head>
   <body>
     <header>
-    <h1>Awesome Books</h1>
-</header>
-<main>
-  <div id="book-list-container">
-      <div id="book-list"></div>
-  </div>
-  <form action="">
-      <span class="separation-line"></span>
-      <h3>Add new book</h3>
-      <div class="input-container">
-          <div>
-              <input class="inputs" id="title" type="text" placeholder="title">
-          </div>
-          <br>
-          <div>
-              <input class="inputs" id="author" type="text" placeholder="author">
-          </div>
-          <br>
-          <div class="button">
+      <h1>Awesome Books</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#book-list" class="active">Books list</a></li>
+          <li><a href="#add-form">Add new book</a></li>
+          <li><a href="#contact">Contact info</a></li>
+        </ul>
+      </nav>
+      
+    </header>
+    <main>
+      <div id="datetime"></div>
+      <section id="book-list" class="content-section">
+        <div id="book-list-container"></div>
+      </section>
+      <section id="add-form" class="content-section">
+        <form action="">
+          <span class="separation-line"></span>
+          <h3>Add new book</h3>
+          <div class="input-container">
+            <div>
+              <input
+                class="inputs"
+                id="title"
+                type="text"
+                placeholder="Title"
+              />
+            </div>
+            <br />
+            <div>
+              <input
+                class="inputs"
+                id="author"
+                type="text"
+                placeholder="Author"
+              />
+            </div>
+            <br />
+            <div class="button">
               <button id="add-button" type="submit">Add</button>
+            </div>
           </div>
-      </div>
-  </form>
-</main>
+        </form>
+      </section>
+      <section id="contact" class="content-section">
+        <h3>Contact Info</h3>
+        <p>Email: contact@example.com</p>
+        <p>Phone: 123-456-7890</p>
+      </section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
