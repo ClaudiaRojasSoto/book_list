@@ -8,40 +8,35 @@ class BookList {
 
     this.loadBooksFromLocalStorage();
     this.inputButton.addEventListener('click', this.addBook.bind(this));
+
+    this.setupNavigation();
   }
 
   displayBooks() {
-    this.bookListContainer.innerHTML = '';
-
-    const list = document.createElement('ul');
-    list.classList.add('list-container');
+    const bookList = document.getElementById('book-list');
+    bookList.innerHTML = '';
 
     this.books.forEach((book, index) => {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement('div');
+      listItem.classList.add('book-item');
+
       const titleElement = document.createElement('p');
-      const authorElement = document.createElement('p');
-      const removeButton = document.createElement('button');
-      const lineElement = document.createElement('hr');
-
-      listItem.style.listStyleType = 'none';
-
       titleElement.textContent = `Title: ${book.title}`;
-      authorElement.textContent = `Author: ${book.author}`;
-      removeButton.textContent = 'Remove';
+      listItem.appendChild(titleElement);
 
+      const authorElement = document.createElement('p');
+      authorElement.textContent = `Author: ${book.author}`;
+      listItem.appendChild(authorElement);
+
+      const removeButton = document.createElement('button');
+      removeButton.textContent = 'Remove';
       removeButton.addEventListener('click', () => {
         this.removeBook(index);
       });
-
-      listItem.appendChild(titleElement);
-      listItem.appendChild(authorElement);
       listItem.appendChild(removeButton);
-      listItem.appendChild(lineElement);
 
-      list.appendChild(listItem);
+      bookList.appendChild(listItem);
     });
-
-    this.bookListContainer.appendChild(list);
 
     if (this.books.length === 0) {
       this.bookListContainer.style.display = 'none';
@@ -80,6 +75,37 @@ class BookList {
     this.books.splice(index, 1);
     this.saveBooksToLocalStorage();
     this.displayBooks();
+  }
+
+  setupNavigation() {
+    const navLinks = document.querySelectorAll('.nav-links li a');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetSectionId = link.getAttribute('href').substring(1);
+        this.showSection(targetSectionId);
+      });
+    });
+  }
+
+  showSection(sectionId) {
+    const contentSections = document.querySelectorAll('.content-section');
+    contentSections.forEach((section) => {
+      if (section.id === sectionId) {
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active');
+      }
+    });
+
+    const navLinks = document.querySelectorAll('.nav-links li a');
+    navLinks.forEach((link) => {
+      if (link.getAttribute('href').substring(1) === sectionId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
   }
 }
 
