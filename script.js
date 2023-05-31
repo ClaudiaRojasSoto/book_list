@@ -89,7 +89,7 @@ class BookList {
     });
   }
 
-  showSection(sectionId) {
+  showSection = (sectionId) => {
     const contentSections = document.querySelectorAll('.content-section');
     contentSections.forEach((section) => {
       if (section.id === sectionId) {
@@ -112,13 +112,16 @@ class BookList {
 
 document.addEventListener('DOMContentLoaded', () => {
   const bookList = new BookList();
+  bookList.displayBooks();
   updateDateTime();
 
   function updateDateTime() {
     const datetimeElement = document.getElementById('datetime');
     const now = new Date();
 
-    const options = { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const options = {
+      month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric',
+    };
     const dateTimeString = now.toLocaleString('en-US', options);
 
     const formattedDateTime = dateTimeString.replace(',', '');
