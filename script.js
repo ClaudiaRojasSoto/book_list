@@ -22,17 +22,18 @@ class BookList {
 
       const titleElement = document.createElement('p');
       titleElement.textContent = `Title: ${book.title}`;
-      listItem.appendChild(titleElement);
 
       const authorElement = document.createElement('p');
       authorElement.textContent = `Author: ${book.author}`;
-      listItem.appendChild(authorElement);
 
       const removeButton = document.createElement('button');
       removeButton.textContent = 'Remove';
       removeButton.addEventListener('click', () => {
         this.removeBook(index);
       });
+
+      listItem.appendChild(titleElement);
+      listItem.appendChild(authorElement);
       listItem.appendChild(removeButton);
 
       bookList.appendChild(listItem);
@@ -111,4 +112,19 @@ class BookList {
 
 document.addEventListener('DOMContentLoaded', () => {
   const bookList = new BookList();
+  updateDateTime();
+
+  function updateDateTime() {
+    const datetimeElement = document.getElementById('datetime');
+    const now = new Date();
+
+    const options = { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const dateTimeString = now.toLocaleString('en-US', options);
+
+    const formattedDateTime = dateTimeString.replace(',', '');
+
+    datetimeElement.textContent = formattedDateTime;
+  }
+
+  setInterval(updateDateTime, 1000);
 });

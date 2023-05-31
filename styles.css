@@ -12,17 +12,20 @@ header {
   background-color: #333;
   color: #fff;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
   text-align: center;
+  margin-right: auto;
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
-  justify-content: center;
-  padding: 10px 0;
+  align-items: center;
 }
 
 nav li {
@@ -76,41 +79,39 @@ main {
   margin: 36px auto;
 }
 
+#book-list {
+  margin-top: 10px;
+  border: solid 2px black;
+}
+
 #book-list-container {
   border: 2px solid black;
   padding: 10px;
-  margin-bottom: 20px;
 }
 
-.list-container {
-  list-style-type: none;
-  padding: 0;
-}
-
-.list-container li {
+.book-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
   padding: 10px;
 }
 
-.list-container li:nth-child(odd) {
-  background-color: #fff;
-  color: #333;
+.book-item:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-.list-container p {
+.book-item p {
   margin: 0;
 }
 
-.list-container button {
-  margin-left: auto;
+.book-item button {
   box-shadow: 3px 3px;
 }
 
-.even {
-  background-color: grey;
+#datetime {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 14px;
 }
